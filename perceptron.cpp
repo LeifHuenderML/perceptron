@@ -12,12 +12,11 @@
 
 class Perceptron{
 private:
-    std::vector<double> p;
-    std::vector<double> n;
     std::vector<double> w;
+    std::vector<std::vector<double>> data;
     void Perceptron::init_w(){
          //initialize w with random numbers
-        for(int i = 0; i < n.size(); ++i){
+        for(int i = 0; i < data.size(); ++i){
             w.push_back(static_cast<int>(rand()));
         }
     };
@@ -29,11 +28,11 @@ public:
 
     };
     void Perceptron::trainPerceptron(){
-       init_w();
-       bool converge = false;
-       while(!converge){
-        
-       }
+        init_w();
+        bool converge = false;
+        while(!converge){
+            std::vector<double> x = data[rand() % data.size()];
+        }
     };
     Perceptron::Perceptron(){
         //seed random number generator

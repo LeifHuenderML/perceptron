@@ -20,8 +20,6 @@
 
 class Perceptron{
 private:
-    std::vector<double> p;
-    std::vector<double> n;
     std::vector<double> w;
 public:
     void setInputs(std::vector<double> p, std::vector<double> n);
