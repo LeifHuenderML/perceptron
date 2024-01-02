@@ -20,12 +20,17 @@
 
 class Perceptron{
 private:
+    double pLabel;
+    double nLabel;
     std::vector<double> w;
+    std::vector<std::vector<double>> data;
+    void init_weights();
+    double dotProduct(std::vector<double> &a, std::vector<double> &b);
+    void vectorAddition(std::vector<double> &a, std::vector<double> &b);
+    void vectorSubtraction(std::vector<double> &a, std::vector<double> &b);
 public:
-    void setInputs(std::vector<double> p, std::vector<double> n);
-    void setLabels(std::string l1, std::string l2);
-    void trainPerceptron();
+    void trainPerceptron(int threshold);
     Perceptron();
 };
 
-#endif 
+#endif
