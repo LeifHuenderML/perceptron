@@ -14,24 +14,24 @@ During each iteration, the algorithm selects a random data point for prediction 
 To begin using this perceptron implementation, follow these steps:
 
 1. **Clone the Repository**
-
+```bash
 git clone https://github.com/LeifHuenderML/perceptron.git
-
+```
 
 
 2. **Navigate to the Directory**
-
+```bash
 cd perceptron
-
+```
 
 3. **Compile the Source Files**
-
+```bash
 g++ -std=c++11 -o perceptron perceptron.cpp main.cpp
-
+```
 
 4. **Run the Program**
-
+```bash
 ./perceptron
-
+```
 ## Explore and Enjoy!
 This model offers a great starting point for exploring machine learning concepts. Feel free to dive in and experiment!
