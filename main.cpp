@@ -11,18 +11,24 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <iostream>
 
 #include "perceptron.h"
 
-std::fstream read_csv();
-void clean_data();
-void seperate_data();
+std::vector<std::vector<double>> read_csv(std::string file_path, std::string label1, std::string label2);
 
 int main(){
     std::string label1 = "Iris-setosa";
-    std::string label2 = "Iris-versicolor"
+    std::string label2 = "Iris-versicolor";
 
-return 0;
+    std::vector<std::vector<double>> data = read_csv("iris_dataset/train.csv", label1, label2);
+    std::vector<std::vector<double>> testData = read_csv("iris_dataset/test.csv", label1, label2);
+
+    Perceptron perceptron;
+    perceptron.setData(data);
+    int iterations = 100;
+    perceptron.trainPerceptron(iterations);
+    return 0;
 }
 
 //creates a tensor out of the data read from a csv, it assumes there will be 2 labeling options

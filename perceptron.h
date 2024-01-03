@@ -29,6 +29,7 @@ private:
     void vectorAddition(std::vector<double> &a, std::vector<double> &b);
     void vectorSubtraction(std::vector<double> &a, std::vector<double> &b);
 public:
+    void setData(std::vector<std::vector<double>> d);
     void trainPerceptron(int threshold);
     Perceptron();
 };

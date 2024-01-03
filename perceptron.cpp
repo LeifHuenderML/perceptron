@@ -10,6 +10,10 @@
  */
 #include "perceptron.h"
 
+void Perceptron::setData(std::vector<std::vector<double>> d){
+    data = d;
+};
+
 void Perceptron::init_weights(){
     //initialize w with random numbers
     for(int i = 0; i < data[0].size(); ++i){
@@ -74,8 +78,8 @@ void Perceptron::trainPerceptron(int threshold){
             std::swap(tempData[placement], tempData.back());
             tempData.pop_back();
         }
+        ++ nIterations;
     }
-    ++ nIterations;
 };
 
 Perceptron::Perceptron(){
