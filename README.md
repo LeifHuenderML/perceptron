@@ -1,25 +1,37 @@
-<img src="/docs/images/perceptron_logo.png"
-alt="perceptron logo" width="200"/>
-# perceptron
-This is a straightforward C++ implementation of a perceptron, inspired by the seminal paper "The Perceptron" by Frank Rosenblatt
+<img src="/docs/images/perceptron_logo.png" alt="Perceptron Logo" width="200"/>
 
-Additional inspiration for this project is from https://towardsdatascience.com/perceptron-learning-algorithm-d5db0deab975. 
-This is a very basic implementation of a perceptron, which I built to grasp the fundamental components of how the perceptron algorithm functions. The core of the perceptron lies in the training algorithm I developed. It begins by initializing the weights with random numbers and then runs a loop until convergence, provided the data it's being trained on is linearly separable. If not, you can set a maximum number of training iterations before it stops. In each iteration, it randomly selects a member of the vector for prediction and then updates the weights accordingly. The underlying logic checks if the weight is greater or less than zero; if it's greater, it's considered label one, and if less, label two. With every incorrect prediction, it adjusts the weight vector by either adding or subtracting the values of the data it just processed. And that's essentially the crux of the perceptron.
+# Perceptron
 
-To test and train your own perceptron you can clone my repository 
+## Introduction
+This repository contains a straightforward C++ implementation of a perceptron, inspired by Frank Rosenblatt's seminal paper "The Perceptron". Additional insights were gathered from [this Towards Data Science article](https://towardsdatascience.com/perceptron-learning-algorithm-d5db0deab975).
+
+## Overview
+The implementation focuses on the essential elements of the perceptron algorithm. The process begins by initializing the weights to random values. It then iteratively adjusts these weights based on the data's linear separability. If the data isn't linearly separable, you can set a limit on the number of training iterations.
+
+During each iteration, the algorithm selects a random data point for prediction and updates the weights based on the outcome. The decision criteria are based on the sign of the dot product of the weights and the input; positive for one label and negative for the other. Incorrect predictions lead to adjustments in the weight vector through the addition or subtraction of the data point values.
+
+## Getting Started
+To begin using this perceptron implementation, follow these steps:
+
+1. **Clone the Repository**
 
 git clone https://github.com/LeifHuenderML/perceptron.git
 
-then change to the directory
+
+
+2. **Navigate to the Directory**
 
 cd perceptron
 
-then compile the files
 
-g++ -std=11 perceptron -o perceptron.cpp main.cpp
+3. **Compile the Source Files**
 
-then run the program
+g++ -std=c++11 -o perceptron perceptron.cpp main.cpp
 
-./perceptron 
 
-there is lots left to explore with this model i created. Have Fun!
+4. **Run the Program**
+
+./perceptron
+
+## Explore and Enjoy!
+This model offers a great starting point for exploring machine learning concepts. Feel free to dive in and experiment!
