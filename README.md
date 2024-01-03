@@ -3,7 +3,7 @@
 # Perceptron
 
 ## Introduction
-This repository contains a straightforward C++ implementation of a perceptron, inspired by Frank Rosenblatt's seminal paper "The Perceptron". Additional insights were gathered from [this Towards Data Science article](https://towardsdatascience.com/perceptron-learning-algorithm-d5db0deab975).
+This repository contains a straightforward C++ implementation of a perceptron, inspired by Frank Rosenblatt's seminal paper [The Perceptron](https://blogs.umass.edu/brain-wars/files/2016/03/rosenblatt-1957.pdf). Additional insights were gathered from [Perceptron Learning Algorithm: A Graphical Explanation Of Why It Works](https://towardsdatascience.com/perceptron-learning-algorithm-d5db0deab975) by Akshay L Chandra.
 
 ## Overview
 The implementation focuses on the essential elements of the perceptron algorithm. The process begins by initializing the weights to random values. It then iteratively adjusts these weights based on the data's linear separability. If the data isn't linearly separable, you can set a limit on the number of training iterations.
